@@ -21,7 +21,7 @@ const Description = () => {
           src={assets.sample_img_1}
           alt="sample"
         />
-        <div>
+        <div className="text-center">
           <h2 className="text-3xl font-medium max-w-lg mb-4">
             Discover the AI-Powered Image Generator
           </h2>

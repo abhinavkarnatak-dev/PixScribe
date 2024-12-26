@@ -76,14 +76,15 @@ const Header = () => {
         {Array(6)
           .fill("")
           .map((item, index) => (
-            <motion.img
-              className="rounded hover:scale-105 transition-all duration-300 cursor-pointer max-sm:w-10"
-              whileHover={{ scale: 1.05, duration: 0.1 }}
-              src={index % 2 === 0 ? assets.sample_img_2 : assets.sample_img_1}
-              alt=""
-              key={index}
-              width={70}
-            />
+            <motion.div className="relative group" key={index}>
+              <motion.img
+                className="rounded hover:scale-105 transition-all duration-100 cursor-pointer max-sm:w-10"
+                whileHover={{ scale: 1.05 }}
+                src={assets[`sample_img_${index + 1}`]}
+                alt={`sample image ${index + 1}`}
+                width={70}
+              />
+            </motion.div>
           ))}
       </motion.div>
       <motion.p
