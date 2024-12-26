@@ -34,7 +34,7 @@ const Result = () => {
     >
       <div>
         <div className="relative">
-          <img className="max-w-sm rounded" src={image} alt="sample" />
+          <img className="w-60 lg:w-[384px] rounded" src={image} alt="sample" />
           <span
             className={`absolute bottom-0 left-0 h-1 bg-blue-500 ${
               loading ? "w-full transition-all duration-[10s]" : "w-0"
@@ -49,7 +49,7 @@ const Result = () => {
             onChange={(e) => setInput(e.target.value)}
             value={input}
             type="text"
-            placeholder="Describe what you want to generate"
+            placeholder="Enter your prompt"
             className="flex-1 bg-transparent outline-none ml-8 max-sm:w-20 placeholder-color"
           />
           <button
