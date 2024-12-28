@@ -101,12 +101,7 @@ const Login = () => {
             required
           />
         </div>
-        {state === "Login" && (
-          <p className="text-sm text-blue-600 my-4 cursor-pointer">
-            Forgot password?
-          </p>
-        )}
-        <button className="bg-blue-600 w-full text-white py-2 rounded-full">
+        <button className="bg-blue-600 w-full text-white py-2 rounded-full mt-4">
           {state === "Login" ? "Login" : "Sign Up"}
         </button>
         {state === "Login" ? (
