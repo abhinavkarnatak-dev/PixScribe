@@ -69,8 +69,8 @@ const Header = () => {
         <img className="w-6" src={assets.star_group} alt="star" />
       </motion.button>
       <div className="relative">
-        <div className="absolute -left-1 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute -right-1 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute -left-1 top-0 h-full w-16 bg-gradient-to-r from-teal-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute -right-1 top-0 h-full w-16 bg-gradient-to-l from-teal-50 to-transparent z-10 pointer-events-none" />
         <Marquee speed={32}>
           <motion.div
             className="flex flex-wrap justify-evenly mt-16"
