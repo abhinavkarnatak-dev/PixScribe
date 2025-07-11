@@ -83,7 +83,7 @@ const Header = () => {
               .map((item, index) => (
                 <motion.div className="relative group" key={index}>
                   <img
-                    className="rounded-lg transition-all duration-100 cursor-pointer max-sm:w-20 w-32 mx-3"
+                    className="rounded-lg transition-all duration-100 cursor-pointer max-sm:w-20 w-40 mx-3"
                     src={assets[`sample_img_${index + 1}`]}
                     alt={`sample image ${index + 1}`}
                     width={70}
