@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { assets } from "../assets/assets";
 import { motion } from "motion/react";
+import Marquee from "react-fast-marquee";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 
@@ -67,26 +68,31 @@ const Header = () => {
         Generate Images{" "}
         <img className="w-6" src={assets.star_group} alt="star" />
       </motion.button>
-      <motion.div
-        className="flex flex-wrap justify-center mt-16 gap-3"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-      >
-        {Array(6)
-          .fill("")
-          .map((item, index) => (
-            <motion.div className="relative group" key={index}>
-              <motion.img
-                className="rounded hover:scale-105 transition-all duration-100 cursor-pointer max-sm:w-10"
-                whileHover={{ scale: 1.05 }}
-                src={assets[`sample_img_${index + 1}`]}
-                alt={`sample image ${index + 1}`}
-                width={70}
-              />
-            </motion.div>
-          ))}
-      </motion.div>
+      <div className="relative">
+        <div className="absolute -left-1 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute -right-1 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <Marquee speed={32}>
+          <motion.div
+            className="flex flex-wrap justify-evenly mt-16"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
+            {Array(7)
+              .fill("")
+              .map((item, index) => (
+                <motion.div className="relative group" key={index}>
+                  <img
+                    className="rounded-lg transition-all duration-100 cursor-pointer max-sm:w-20 w-32 mx-3"
+                    src={assets[`sample_img_${index + 1}`]}
+                    alt={`sample image ${index + 1}`}
+                    width={70}
+                  />
+                </motion.div>
+              ))}
+          </motion.div>
+        </Marquee>
+      </div>
       <motion.p
         className="mt-2 text-neutral-600"
         initial={{ opacity: 0 }}

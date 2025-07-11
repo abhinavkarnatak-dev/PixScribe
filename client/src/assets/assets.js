@@ -8,6 +8,7 @@ import sample_img_3 from "./sample_img_3.png";
 import sample_img_4 from "./sample_img_4.png";
 import sample_img_5 from "./sample_img_5.png";
 import sample_img_6 from "./sample_img_6.png";
+import sample_img_7 from "./sample_img_7.png";
 import step_icon_1 from "./step_icon_1.svg";
 import step_icon_2 from "./step_icon_2.svg";
 import step_icon_3 from "./step_icon_3.svg";
@@ -27,6 +28,7 @@ export const assets = {
   sample_img_4,
   sample_img_5,
   sample_img_6,
+  sample_img_7,
   cross_icon,
   star_group,
   credit_star,
